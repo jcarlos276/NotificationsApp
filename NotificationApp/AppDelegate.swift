@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.sharedSDK().debug = true
         Fabric.with([Answers.self])
+        
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         
@@ -116,7 +117,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         saveNotification(withUserInfo: userInfo)
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        //TAP EN LA BURBUJA
+        //CUANDO LE DAN TAP EN LA BURBUJA
         let userInfo = response.notification.request.content.userInfo
         print("--------------------NOTIFICATION-----------------------")
         print("\(userInfo)")

@@ -87,23 +87,87 @@
 		5233DD7E22E8F37D0083E246 /* NotificationApp */ = {
 			isa = PBXGroup;
 			children = (
-				5233DD9122E8F4AC0083E246 /* NotificationApp.entitlements */,
 				5233DD7F22E8F37D0083E246 /* AppDelegate.swift */,
-				5233DD8122E8F37D0083E246 /* HomeViewController.swift */,
-				5233DD8322E8F37D0083E246 /* Main.storyboard */,
-				5233DD8622E8F37E0083E246 /* Assets.xcassets */,
+				5285905822F893B700244746 /* Model */,
+				5285905A22F893DB00244746 /* View */,
+				5285905B22F893ED00244746 /* Controllers */,
+				5285906022F8945800244746 /* Helpers */,
+				5285905C22F893FA00244746 /* Resources */,
+			);
+			path = NotificationApp;
+			sourceTree = "<group>";
+		};
+		5285905822F893B700244746 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5233DD9622E905D40083E246 /* Notification.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5285905A22F893DB00244746 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				5233DD8822E8F37E0083E246 /* LaunchScreen.storyboard */,
+				5233DD8322E8F37D0083E246 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5285905B22F893ED00244746 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5285905F22F8943C00244746 /* UINavigationControllers */,
+				5285905E22F8942F00244746 /* UIViewControllers */,
+				5285905D22F8942800244746 /* UITableViewCells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5285905C22F893FA00244746 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5233DD8622E8F37E0083E246 /* Assets.xcassets */,
 				5233DD8B22E8F37E0083E246 /* Info.plist */,
 				5233DD9C22E9199C0083E246 /* GoogleService-Info.plist */,
 				5233DD9222E8F5BA0083E246 /* GoogleService-Info(peruapps).plist */,
-				5233DD9422E904940083E246 /* NotificationDetailViewController.swift */,
-				5233DD9622E905D40083E246 /* Notification.swift */,
+				5233DD9122E8F4AC0083E246 /* NotificationApp.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5285905D22F8942800244746 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
 				5233DD9822E908630083E246 /* NotificationTableViewCell.swift */,
-				5233DD9A22E914F80083E246 /* UIViewController + Helpers.swift */,
-				5233DD9E22E9F1FA0083E246 /* String + Helpers.swift */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		5285905E22F8942F00244746 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5233DD8122E8F37D0083E246 /* HomeViewController.swift */,
+				5233DD9422E904940083E246 /* NotificationDetailViewController.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		5285905F22F8943C00244746 /* UINavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
 				5233DDA022E9F4500083E246 /* CustomNavigationController.swift */,
 			);
-			path = NotificationApp;
+			path = UINavigationControllers;
+			sourceTree = "<group>";
+		};
+		5285906022F8945800244746 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5233DD9A22E914F80083E246 /* UIViewController + Helpers.swift */,
+				5233DD9E22E9F1FA0083E246 /* String + Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D917ED7CD36DB643B2D2A54C /* Frameworks */ = {
@@ -338,6 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -393,6 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -408,10 +474,10 @@
 			baseConfigurationReference = 986AF693E553F6B367228075 /* Pods-NotificationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NotificationApp/NotificationApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NotificationApp/Resources/NotificationApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMPQ8DKJM5;
-				INFOPLIST_FILE = NotificationApp/Info.plist;
+				INFOPLIST_FILE = NotificationApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,10 +494,10 @@
 			baseConfigurationReference = 92C7180709AA358EFD162117 /* Pods-NotificationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NotificationApp/NotificationApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NotificationApp/Resources/NotificationApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMPQ8DKJM5;
-				INFOPLIST_FILE = NotificationApp/Info.plist;
+				INFOPLIST_FILE = NotificationApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
